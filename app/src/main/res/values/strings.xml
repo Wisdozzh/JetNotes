@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">JetNotes</string>
+    <string name="home_app_bar">home_app_bar</string>
+    <string name="note_title">note_title</string>
+    <string name="note_description">note_description</string>
+    <string name="place_holder_note_title">default_title</string>
+    <string name="place_holder_note_description">default_description</string>
+    <string name="create_app_bar">create_app_bar</string>
+    <string name="icon_arrow_back">icon_arrow_back</string>
+    <string name="icon_check">icon_check</string>
+    <string name="update_app_bar">update_app_bar</string>
+    <string name="icon_empty">icon_empty</string>
+    <string name="text_empty">text_empty</string>
+</resources>
