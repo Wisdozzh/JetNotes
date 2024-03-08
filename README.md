@@ -19,7 +19,7 @@
 
 **MVVM架构组件**：查看一个简单的图标，其中展示了架构的组件以及它们如何协同工作。
 
-<p align=center><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e4940615e71746808c25824733ea2040~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=624&h=362&s=44487&e=png&a=1&b=ededed" alt="image.png"  /></p>
+<p align=center><img src="https://github.com/Wisdozzh/JetNotes/blob/main/images/architure.png" alt="image.png"  /></p>
 
 **实体**：使用Room是描述数据库表的带注释的类。
 
@@ -37,7 +37,7 @@
 
 **创建包来组织应用程序**
 
-<p align=center><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/71b3468974cc47e39cf03dd7e3d69553~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3450&h=2002&s=530593&e=png&b=222427" alt="image.png"  /></p>
+<p align=center><img src="https://github.com/Wisdozzh/JetNotes/blob/main/images/package.png" alt="image.png"  /></p>
 
 ## 二、环境搭建
 在开始之前，配置开发环境很重要。确保Android Studio已安装并正确配置以进行Android开发。您的项目中还需要以下依赖项：
@@ -1073,7 +1073,7 @@ fun EmptyContent() {
 
 下面是演示效果:
 
-<p align=center><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fb90dae2f56d4eeaac67c5d32cb2b529~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=590&h=1217&s=1419352&e=gif&f=167&b=e9e9e9" alt="SVID_20240308_154655_1-ezgif.com-optimize.gif" width="70%" /></p>
+<p align=center><img src="https://github.com/Wisdozzh/JetNotes/blob/main/images/preview.gif" alt="preview.gif" width="70%" /></p>
 
 
 
