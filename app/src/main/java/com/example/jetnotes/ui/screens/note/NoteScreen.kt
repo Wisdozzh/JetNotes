@@ -7,15 +7,18 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
-import com.example.jetnotes.data.model.NoteModel
 import com.example.jetnotes.viewmodels.NoteViewModel
 
 @Composable
 fun NoteScreen(
     navController: NavController,
     noteViewModel: NoteViewModel,
-    selected: NoteModel?
+    selected: Int?
 ) {
+    selected?.let {
+        noteViewModel.getSelectNoteID(selected)
+        noteViewModel.updateNotesFields(noteViewModel.selectedNote.value)
+    }
     var title by noteViewModel.title
     var description by noteViewModel.description
 

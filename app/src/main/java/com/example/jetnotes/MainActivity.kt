@@ -7,10 +7,14 @@ import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavHost
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.example.jetnotes.ui.screens.HomeScreen
 import com.example.jetnotes.ui.screens.note.NoteScreen
 import com.example.jetnotes.ui.theme.JetNotesTheme
@@ -32,14 +36,29 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    HomeScreen(navHostController = navHostController, noteViewModel = noteViewModel)
-//                    NoteScreen(navController = navHostController, noteViewModel = noteViewModel, selected = null)
-//                    NavHost(navController = navHostController, startDestination = "login") {
-//                        composable("login") { HomeScreen(navHostController = navHostController, noteViewModel = noteViewModel) }
-//                        composable("signup") {NoteScreen(navController = navHostController, noteViewModel = noteViewModel, selected = null) }
-//                    }
+                    ScreenMain(navHostController, noteViewModel)
                 }
             }
+        }
+    }
+}
+
+@Composable
+private fun ScreenMain(navHostController: NavHostController, noteViewModel: NoteViewModel) {
+    NavHost(navController = navHostController, startDestination = "home_screen") {
+        composable("home_screen") {
+            HomeScreen(navHostController = navHostController, noteViewModel = noteViewModel)
+        }
+        composable("note_screen") {
+            NoteScreen(navController = navHostController, noteViewModel = noteViewModel, selected = null)
+        }
+        composable("note_screen/{note_id}", arguments = listOf(
+            navArgument("note_id") {
+                type = NavType.IntType
+            }
+        )) {
+            val selected = it.arguments?.getInt("note_id")
+            NoteScreen(navController = navHostController, noteViewModel = noteViewModel, selected = selected)
         }
     }
 }
